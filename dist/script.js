@@ -14001,6 +14001,20 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./slider */ "./src/js/slider.js");
+/* harmony import */ var _moduls_modals__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./moduls/modals */ "./src/js/moduls/modals.js");
+/* harmony import */ var _moduls_modals__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_moduls_modals__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+/***/ }),
+
+/***/ "./src/js/moduls/modals.js":
+/*!*********************************!*\
+  !*** ./src/js/moduls/modals.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
 
 
 /***/ }),
