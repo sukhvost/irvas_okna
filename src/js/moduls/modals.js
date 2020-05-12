@@ -14,7 +14,7 @@ const modals = () => {
                 document.body.style.overflow = 'hidden';
                 // document.body.classList.add('modal-open');
             });
-        })
+        });
 
         close.addEventListener('click', () => {
             modal.style.display = 'none';
