@@ -17799,6 +17799,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _moduls_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./moduls/forms */ "./src/js/moduls/forms.js");
 /* harmony import */ var _moduls_changeModalsState__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./moduls/changeModalsState */ "./src/js/moduls/changeModalsState.js");
 /* harmony import */ var _moduls_timer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./moduls/timer */ "./src/js/moduls/timer.js");
+/* harmony import */ var _moduls_images__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./moduls/images */ "./src/js/moduls/images.js");
+
 
 
 
@@ -17993,6 +17995,21 @@ var forms = function forms(state) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (forms);
+
+/***/ }),
+
+/***/ "./src/js/moduls/images.js":
+/*!*********************************!*\
+  !*** ./src/js/moduls/images.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var images = function images() {};
+
+/* harmony default export */ __webpack_exports__["default"] = (images);
 
 /***/ }),
 

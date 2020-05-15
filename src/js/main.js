@@ -4,6 +4,7 @@ import tabs from './moduls/tabs';
 import forms from './moduls/forms';
 import changeModalsState from './moduls/changeModalsState';
 import timer from './moduls/timer';
+import images from './moduls/images';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
