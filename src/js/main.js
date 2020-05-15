@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     };
 
-    let deadline = '2020-05-20';
+    let deadline = '2020-06-01';
     changeModalsState(modalState);
     modals();
     tabs('.glazing_slider', '.glazing_block', '.glazing_content', 'active');

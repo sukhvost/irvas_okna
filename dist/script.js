@@ -17809,7 +17809,7 @@ window.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
   var modalState = {};
-  var deadline = '2020-05-20';
+  var deadline = '2020-06-01';
   Object(_moduls_changeModalsState__WEBPACK_IMPORTED_MODULE_4__["default"])(modalState);
   Object(_moduls_modals__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_moduls_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('.glazing_slider', '.glazing_block', '.glazing_content', 'active');
