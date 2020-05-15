@@ -17809,12 +17809,14 @@ window.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
   var modalState = {};
+  var deadline = '2020-05-20';
   Object(_moduls_changeModalsState__WEBPACK_IMPORTED_MODULE_4__["default"])(modalState);
   Object(_moduls_modals__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_moduls_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('.glazing_slider', '.glazing_block', '.glazing_content', 'active');
   Object(_moduls_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('.decoration_slider', '.no_click', '.decoration_content > div > div', 'after_click');
   Object(_moduls_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('.balcon_icons', '.balcon_icons_img', '.big_img>img', 'do_image_more', 'inline-block');
   Object(_moduls_forms__WEBPACK_IMPORTED_MODULE_3__["default"])(modalState);
+  Object(_moduls_timer__WEBPACK_IMPORTED_MODULE_5__["default"])('.container1', deadline);
 });
 
 /***/ }),
@@ -18159,7 +18161,58 @@ var tabs = function tabs(headerSelector, tabSelector, contentSelector, activeCla
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var timer = function timer() {};
+var timer = function timer(id, deadline) {
+  var addZero = function addZero(num) {
+    if (num <= 9) {
+      return "0".concat(num);
+    } else {
+      return num;
+    }
+  };
+
+  var getTimeRemaining = function getTimeRemaining(endtime) {
+    var t = Date.parse(endtime) - Date.parse(new Date());
+    var seconds = Math.floor(t / 1000 % 60);
+    var minutes = Math.floor(t / 1000 / 60 % 60);
+    var hours = Math.floor(t / 1000 / 60 / 60 % 24);
+    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    return {
+      total: t,
+      days: days,
+      hours: hours,
+      minutes: minutes,
+      seconds: seconds
+    };
+  };
+
+  var setClock = function setClock(selector, endtime) {
+    var timer = document.querySelector(selector);
+    var days = timer.querySelector('#days');
+    var hours = timer.querySelector('#hours');
+    var minutes = timer.querySelector('#minutes');
+    var seconds = timer.querySelector('#seconds');
+    var timerInterval = setInterval(updateClock, 1000);
+    updateClock();
+
+    function updateClock() {
+      var t = getTimeRemaining(endtime);
+      days.textContent = addZero(t.days);
+      hours.textContent = addZero(t.hours);
+      minutes.textContent = addZero(t.minutes);
+      seconds.textContent = addZero(t.seconds);
+
+      if (t.total <= 0) {
+        days.textContent = '00';
+        hours.textContent = '00';
+        minutes.textContent = '00';
+        seconds.textContent = '00';
+        clearInterval(timerInterval);
+      }
+    }
+  };
+
+  setClock(id, deadline);
+};
 
 /* harmony default export */ __webpack_exports__["default"] = (timer);
 
