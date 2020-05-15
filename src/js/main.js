@@ -3,6 +3,7 @@ import modals from './moduls/modals';
 import tabs from './moduls/tabs';
 import forms from './moduls/forms';
 import changeModalsState from './moduls/changeModalsState';
+import timer from './moduls/timer';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
