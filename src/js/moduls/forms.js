@@ -1,6 +1,9 @@
-const forms = () => {
+import checkNumInputs from './onlyNumber';
+const forms = (state) => {
     const form = document.querySelectorAll('form');
-    const input = document.querySelectorAll('input');
+    const inputs = document.querySelectorAll('input');
+
+    checkNumInputs('input[name="user_phone"]');
 
     const message = {
         loading: 'Загрузка...',
@@ -14,7 +17,13 @@ const forms = () => {
             method: 'POST',
             body: data
         });
+        return await res.text();
+    };
 
+    const clearInputs = () => {
+        inputs.forEach(item => {
+            item.value = '';
+        });
     };
 
     form.forEach(item => {
@@ -26,6 +35,25 @@ const forms = () => {
             item.append(statusMessage);
 
             const formData = new FormData(item);
+
+            if (item.getAttribute('data-calc') === 'end') {
+                for (let key in state) {
+                    formData.append(key, state[key]);
+                }
+            }
+
+            postData('assets/server.php', formData)
+                .then(res => {
+                    console.log(res);
+                    statusMessage.textContent = message.success;
+                })
+                .catch(() => statusMessage.textContent = message.failure)
+                .finally(() => {
+                    clearInputs();
+                    setTimeout(() => {
+                        statusMessage.remove();
+                    }, 5000);
+                });
 
             console.log(formData);
         });
