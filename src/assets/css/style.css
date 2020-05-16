@@ -621,6 +621,11 @@ textarea:focus {
     opacity: 1;
 }
 
+.img_size {
+    width: 10%;
+    height: 10%;
+}
+
 
 /*Guarantees*/
 
